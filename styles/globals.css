@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppin', sans-serif;
+    min-height: 100vh;
+    background-image: linear-gradient(120deg, #e2c35d, #d88771);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header,
+form {
+    min-height: 20vh;
+}
+
+.select {
+    position: relative;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    color: #fff;
+    background: #ff6f47;
+    top: 0;
+    left: 8rem;
+    padding: 1rem;
+    pointer-events: none;
+}
+
+.select:hover::after {
+    color: #ff6f47;
+    background: #fff;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
